@@ -16,6 +16,7 @@ class Inputstudent extends React.Component
     handleSubmit = ()=>{
         if(this.state.firstname!='' && this.state.lastname!='',this.state.place!='')
         {
+            alert( `Name: ${this.state.firstname} ${this.state.lastname} place: ${this.state.place}   Thank you your Record sucessfully submitted` )
             axios.post('http://localhost:5000/students',this.state)
             .then(res=>{
                 console.log('successfully posted');
